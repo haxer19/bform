@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s;
+      }
+      .overlay.active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 370px;
+        width: 100%;
+        background: #fff;
+        border-radius: 24px;
+        padding: 25px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+      .cover {
+        width: 100%;
+        height: 130px;
+        background-color: #000;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 24px 24px 0 0;
+      }
+      .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      .image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: transparent;
+        padding: 3px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #ffffff;
+      }
+      .profile-card .text-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+      }
+      .text-data .name {
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .text-data .job {
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .profile-card .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .button {
+        background-color: #FFFFFF;
+        border: 0;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #111827;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: .856rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: .75rem 1rem;
+        text-align: center;
+        text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+      .button:hover {
+        background-color: rgb(249,250,251);
+      }
+      .button:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .button:focus-visible {
+        box-shadow: none;
+      }
